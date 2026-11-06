@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android-ghostmap-poc"
+version = "1.0.0"
+description = "Android GhostMap Parser Differential Vulnerability PoC & Defense Toolkit"
+readme = "README.md"
+authors = [{ name = "Security Research" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["android", "security", "vulnerability", "ghostmap", "dos", "poc"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+ghostmap = "ghostmap.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
